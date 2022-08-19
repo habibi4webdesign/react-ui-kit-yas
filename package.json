@@ -61,5 +61,7 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-components": "^5.3.5"
+  }
 }
