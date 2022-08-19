@@ -1,14 +1,15 @@
 import React from "react";
-import { SButton } from "./Button.styles";
 import { ButtonBaseProps } from "./ButtonBase";
+import ButtonBase from './ButtonBase';
 
 export interface ButtonProps extends ButtonBaseProps {
   variant?: "contained" | "outlined" | "text";
-  color?: "primary" | "secondary" | "default";
+  color?: string;
 }
 
 const Button = (props: ButtonProps) => {
-  return <SButton {...props} />;
+  const { variant, color, children, ...others } = props;
+  return <ButtonBase color={color} {...others}>{children}</ButtonBase>;
 };
 
 export default Button;
