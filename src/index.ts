@@ -1,2 +1,4 @@
 import Button from "./lib/Button";
-export { Button };
+import ButtonBase from "./lib/Button/ButtonBase";
+
+export { Button, ButtonBase };

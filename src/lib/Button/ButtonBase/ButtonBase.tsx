@@ -1,26 +1,26 @@
 // import clsx from "clsx";
 import React, { ComponentPropsWithoutRef, forwardRef } from "react";
-import { SButton } from "./Button.styles";
 import { ButtonBaseClasses } from "./ButtonBaseClasses";
 
-export interface ButtonBaseProps extends ComponentPropsWithoutRef<"button"> {
+export interface ButtonBaseProps
+  extends Omit<ComponentPropsWithoutRef<"button">, "color"> {
   children: React.ReactNode;
   className?: string;
   classes?: Partial<ButtonBaseClasses>;
-  color?: string;
 }
 
 const ButtonBase = forwardRef<HTMLButtonElement, ButtonBaseProps>(
   (props, ref) => {
     const { children, classes, className, ...others } = props;
     return (
-      <SButton
+      <button
         ref={ref}
+        className={className}
         // className={clsx(classes?.root, className)}
         {...others}
       >
         {children}
-      </SButton>
+      </button>
     );
   }
 );
