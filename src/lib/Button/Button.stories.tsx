@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import ButtonBase from "./ButtonBase";
+import "../../index.css";
 
 export default {
   title: "Button",
@@ -11,6 +12,16 @@ export const Primary = () => (
     primary
   </Button>
 );
-export const Secondary = () => <Button color="green">secondary</Button>;
+export const Secondary = () => (
+  <Button color="green">
+    secondary
+  </Button>
+);
 
-export const Pure = () => <ButtonBase>pure</ButtonBase>;
+export const WithClassName = () => (
+  <Button className="myClass" color="green">
+    secondary
+  </Button>
+);
+
+export const Pure = () => <ButtonBase> pure</ButtonBase>;

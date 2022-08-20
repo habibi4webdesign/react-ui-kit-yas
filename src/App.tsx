@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Button color="red">Hello World</Button>
-      <ButtonBase classes={{ root: "outside" }}>test</ButtonBase>
+      <ButtonBase>test</ButtonBase>
       <ButtonBase>test 2</ButtonBase>
     </>
   );
